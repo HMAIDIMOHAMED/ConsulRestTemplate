@@ -27,7 +27,6 @@ public class CarService {
         return cars.stream().map((Car car) -> mapToCarResponse(car, clients)).toList();
     }
 
-    // this function allow the change the Car Entity to A Model that we will send ot the client side using the @Builder Annotation
     private CarResponse mapToCarResponse(Car car, Client[] clients) {
         Client foundClient = Arrays.stream(clients)
                 .filter(client -> client.getId().equals(car.getClient_id()))
