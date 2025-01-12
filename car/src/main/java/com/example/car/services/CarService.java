@@ -18,7 +18,7 @@ public class CarService {
     private CarRepository carRepository;
     @Autowired
     private RestTemplate restTemplate;
-    private final String URL = "http://localhost:8888/SERVICE-CLIENT";
+    private final String URL = "http://localhost:8889/SERVICE-CLIENT";
 
     public List<CarResponse> findAll() {
         List<Car> cars = carRepository.findAll();
